@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (! $_SESSION['username']) {
-    echo "Only logged in users may access this page.  Click <a href='login_form.php'here </a> to login<br>";
-    exit;
-}
+// if (! $_SESSION['username']) {
+//     echo "Only logged in users may access this page.  Click <a href='login_form.php'here </a> to login<br>";
+//     exit;
+// }
 include "db_connect.php";
 $new_joke_question =  addslashes($_GET['newjoke']);
 $new_joke_answer =  addslashes($_GET['jokeanswer']);
