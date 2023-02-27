@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 $keywordfromform = $_GET['keyword'];
 echo $keywordfromform;
 echo "<h2>Show all jokes with the word " . $keywordfromform . "</h2>";
-$sql = "SELECT JokeID, Joke_question, Joke_answer FROM Jokes_table JOIN users ON users.user_id = jokes_table.user_id WHERE Joke_question LIKE '%$keywordfromform%'";
+$sql = "SELECT JokeID, Joke_question, Joke_answer FROM Jokes_table JOIN users ON users.user_id = Jokes_table.user_id WHERE Joke_question LIKE '%$keywordfromform%'";
 
 echo "SQL Statement = " . $sql .  "<br>";
 $result = $mysqli->query($sql);
